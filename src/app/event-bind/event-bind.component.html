@@ -22,11 +22,7 @@
   <div class="row mt-2 p-2">
     <div class="col">{{ userInput }}</div>
     <div class="col">
-      <input
-        (input)="onUserInput($event)"
-        [value]="userInput"
-        class="form-control"
-      />
+      <input (input)="onUserInput($event)" [value]="userInput" class="form-control" />
     </div>
     <div class="col">
       <button (click)="resetUserInput()" class="btn btn-danger">
