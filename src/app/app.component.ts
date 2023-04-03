@@ -20,7 +20,7 @@ export class AppComponent {
     {text: 'Template variables', path: 'template-variables'},
     {text: 'Component input', path: 'component-input'},
     {text: 'Component input output', path: 'component-input-output'},
-    {text: 'Welcome', path:'welcome'}
+    {text: 'Chuck Norris Joke', path:'chuck-norris'},
   ];
 
   currentPath = ''
