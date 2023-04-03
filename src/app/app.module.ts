@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { GreetingComponent } from './greeting/greeting.component';
@@ -13,6 +14,22 @@ import { ComponentInputComponent } from './component-input/component-input.compo
 import { SimpleTable0Component } from './component-input/simple-table0/simple-table0.component';
 import { ComponentInputOutputComponent } from './component-input-output/component-input-output.component';
 import { SimpleTable1Component } from './component-input-output/simple-table1/simple-table1.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+
+const routes: Routes = [
+  { path: 'greeting', component: GreetingComponent },
+  { path: 'one-way-bind', component: OneWayBindComponent },
+  { path: 'event-bind', component: EventBindComponent },
+  { path: 'two-way-bind', component: TwoWayBindComponent },
+  { path: 'structural-directives', component: StructuralDirectivesComponent },
+  { path: 'template-variables', component: TemplateVariablesComponent },
+  { path: 'compnent-input', component: ComponentInputComponent  },
+  { path: 'component-input-output', component: ComponentInputOutputComponent },
+  { path:'', component: WelcomeComponent},
+  { path:'**', component: PageNotFoundComponent}
+];
 
 @NgModule({
   declarations: [
@@ -26,11 +43,14 @@ import { SimpleTable1Component } from './component-input-output/simple-table1/si
     ComponentInputComponent,
     SimpleTable0Component,
     ComponentInputOutputComponent,
-    SimpleTable1Component
+    SimpleTable1Component,
+    WelcomeComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
