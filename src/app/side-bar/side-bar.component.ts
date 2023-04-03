@@ -11,7 +11,7 @@ export class SideBarComponent {
 
   @Input() menu: SideBar[] = [];
   
-  active = 'greeting'
+  @Input() active = 'greeting'
 
   onClick(path: string) {
     this.active = path;

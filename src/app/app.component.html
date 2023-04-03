@@ -42,7 +42,7 @@
   <div class="row mt-2">
     <div class="col-3">
       <!-- <p *ngFor="let item of sideBarMenu"><a routerLink="{{ item.path }}">{{ item.text }}</a></p> -->
-      <app-side-bar [menu]="sideBarMenu"></app-side-bar>
+      <app-side-bar [menu]="sideBarMenu" [active]="currentPath"></app-side-bar>
     </div>
     <div class="col-9">
       <router-outlet></router-outlet>
