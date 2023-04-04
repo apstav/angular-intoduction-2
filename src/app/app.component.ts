@@ -10,23 +10,24 @@ import { SideBar } from './app.interfaces';
 export class AppComponent {
   title = 'Angular Introduction';
 
-
   sideBarMenu: SideBar[] = [
-    {text: 'Greeting', path: 'greeting'},
-    {text: 'One way bind', path: 'one-way-bind'},
-    {text: 'Event bind', path: 'event-bind'},
-    {text: 'Two way bind', path: 'two-way-bind'},
-    {text: 'Structural directives', path: 'structural-directives'},
-    {text: 'Template variables', path: 'template-variables'},
-    {text: 'Component input', path: 'component-input'},
-    {text: 'Component input output', path: 'component-input-output'},
-    {text: 'Chuck Norris Joke', path:'chuck-norris'},
+    { text: 'Greeting', path: 'greeting' },
+    { text: 'One way bind', path: 'one-way-bind' },
+    { text: 'Event bind', path: 'event-bind' },
+    { text: 'Two way bind', path: 'two-way-bind' },
+    { text: 'Structural directives', path: 'structural-directives' },
+    { text: 'Template variables', path: 'template-variables' },
+    { text: 'Component input', path: 'component-input' },
+    { text: 'Component input output', path: 'component-input-output' },
+    { text: 'Template Forms', path: 'template-forms' },
+    { text: 'Reactive Forms', path: 'reactive-forms' },
+    { text: 'Chuck Norris Joke', path: 'chuck-norris' },
   ];
 
-  currentPath = ''
+  currentPath = '';
 
-  constructor (private router: Router) {
-    this.router.events.subscribe(()=>{
+  constructor(private router: Router) {
+    this.router.events.subscribe(() => {
       console.log(this.router.url.substring(1));
       this.currentPath = this.router.url.substring(1);
     });
