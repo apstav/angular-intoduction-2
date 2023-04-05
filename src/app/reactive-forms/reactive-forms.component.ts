@@ -18,7 +18,7 @@ function matchValidator(source: string, target: string): ValidatorFn {
     }
   };
 }
-
+// validators
 @Component({
   selector: 'app-reactive-forms',
   templateUrl: './reactive-forms.component.html',
